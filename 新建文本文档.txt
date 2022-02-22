@@ -1,0 +1,136 @@
+{
+  "latex-workshop.message.error.show": false,
+  "latex-workshop.message.warning.show": false,
+  "latex-workshop.latex.autoBuild.run": "never",
+  "latex-workshop.latex.tools": [
+  {
+      // 编译工具和命令
+      "name": "xelatex",
+      "command": "xelatex",
+      "args": [
+          "-synctex=1",
+          "-interaction=nonstopmode",
+          "-file-line-error",
+          "-pdf",
+          "%DOCFILE%"
+      ]
+  },
+  {
+    // 编译工具和命令
+    "name": "xdvipdfmx",
+    "command": "xdvipdfmx",
+    "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "%DOCFILE%"
+    ]
+},
+
+{
+     "name": "lualatex",
+    "command": "lualatex",
+    "args": [
+    "−shell−escape",
+    "−synctex=1",
+    "−interaction=nonstopmode",
+    "−file−line−error",
+    "%DOC%"
+    ]
+},
+
+  {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+          "-synctex=1",
+          "-interaction=nonstopmode",
+          "-file-line-error",
+          "%DOCFILE%"
+      ]
+  },
+  {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": [
+          "%DOCFILE%"
+      ]
+  }
+],
+
+"latex-workshop.latex.recipes": [
+    // {
+    //     "name": "pdf->bib->pdf->pdf",
+    //     "tools": [
+    //         "pdflatex",
+    //         "bibtex",
+    //         "pdflatex",
+    //         "pdflatex"
+    //     ]
+    //   },
+    {
+        "name": "xe->xe->xe",
+        "tools": [
+            "xelatex",
+            "xelatex",
+            "xelatex"
+        ]
+      },
+    {
+        "name": "xelatex",
+        "tools": [
+            "xelatex"
+        ],
+    },
+    {
+        "name": "xe->bib->xe->xe",
+        "tools": [
+            "xelatex",
+            "bibtex",
+            "xelatex",
+            "xelatex"
+        ]
+      },
+   
+    {
+        "name": "lualatex",
+        "tools": [
+            "lualatex"
+        ]
+      },
+    
+],
+
+"latex-workshop.view.pdf.viewer": "external",
+"latex-workshop.view.pdf.external.viewer.command": "E:/Program Files/SumatraPDF/SumatraPDF.exe",  //注意修改路径
+    "latex-workshop.view.pdf.external.viewer.args": [
+        "%PDF%"
+    ],
+    "latex-workshop.view.pdf.external.synctex.command": "E:/Program Files/SumatraPDF/SumatraPDF.exe", //注意修改路径
+    "latex-workshop.view.pdf.external.synctex.args": [
+    "-forward-search",
+    "%TEX%",
+    "%LINE%",
+    "%PDF%",
+],
+
+
+"latex-workshop.hover.preview.enabled":true,
+"latex-workshop.hover.preview.scale":0.7
+
+"editor.wordWrap": "on",
+"[latex]": {
+
+
+"breadcrumbs.showEnums": true
+},
+"git.autofetch": true,
+"git.enableSmartCommit": true,
+"git.confirmSync": false,
+"tabnine.experimentalAutoImports": true,
+"kite.showWelcomeNotificationOnStartup": false,
+"security.workspace.trust.untrustedFiles": "open",
+"markdown-preview-enhanced.previewTheme": "medium.css",
+"window.zoomLevel": 1,
+}
